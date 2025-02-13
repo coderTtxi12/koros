@@ -140,15 +140,31 @@ function HeroSection() {
         <Box ref={transitions.fadeOnce.ref}>
           <Fade direction="up" in={transitions.fadeOnce.inView} timeout={1000}>
             <Box>
-              <Typography
-                variant="h1"
-                sx={{
-                  mb: 2,
-                  color: "text.primary",
-                }}
-              >
-                Build your landing page inseconds with AI
-              </Typography>
+              {/* Title for large screens */}
+              <Box sx={{ display: { xs: "none", md: "block" } }}>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    mb: 2,
+                    color: "text.primary",
+                  }}
+                >
+                  Make queries to videos
+                </Typography>
+              </Box>
+
+              {/* Title for small screens */}
+              <Box sx={{ display: { xs: "block", md: "none" } }}>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    mb: 2,
+                    color: "text.primary",
+                  }}
+                >
+                  Make queries to videos
+                </Typography>
+              </Box>
               <Typography
                 variant="body1"
                 sx={{
